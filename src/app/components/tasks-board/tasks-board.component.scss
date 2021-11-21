@@ -1,0 +1,26 @@
+.tasks-background {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(#cccccc, 0.4),
+      rgba(#5d5d5d, 0.4)
+    ),
+    url(../../../assets/images/tasks-board-background.jpg);
+  background-size: cover;
+  background-position: 50% 65%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1.5rem 0 #aaaaaa inset;
+}
+
+.tasks-board {
+  width: 100rem;
+  margin-top: 0.5rem;
+  background-color: #ffffff;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.95;
+  padding: 3.5rem;
+  border-radius: 0.5rem;
+}
