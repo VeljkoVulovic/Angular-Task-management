@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* define 1rem = 10px ; 10px/16px = 62.5% */
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  line-height: 1.7;
+  padding: 3rem;
+  box-sizing: border-box; /* no extra padding and margin to box */
+}
+
+h1 {
+  font-size: 3.5rem !important;
+}
