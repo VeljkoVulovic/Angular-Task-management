@@ -3,7 +3,7 @@ import { Task } from './models';
 export const Tasks: Task[] = [
   {
     id: 1,
-    description: 'Take dog for a walk',
+    description: 'Testing',
     done: false,
   },
   {
@@ -18,7 +18,8 @@ export const Tasks: Task[] = [
   },
   {
     id: 4,
-    description: 'Car wash',
+    description:
+      'testinggg gggggggg ggggggg gggggggggg ggggggggggg ggggggg testinggggg gggggggggg ggggggg ggggggggg gggggggggg ggggggggggg ggggggggggg gggggggggggggggg ggggggggggggggggg gggggggggggggggg ggggggggggggg gggggggggg ggggggggggggg ggggggggg ggggggg gggggggggg ggggggggg gggggggggg gggggggg ggggggg ggggggggggggg gggggggggggg gggggggggggggggg ggggggg',
     done: true,
   },
 ];

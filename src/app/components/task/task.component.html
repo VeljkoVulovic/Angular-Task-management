@@ -1,3 +1,15 @@
 <div class="task">
-    <h3>Task text 123 test 123</h3>
+  <input
+    class="task-checkbox"
+    type="checkbox"
+    [checked]="task?.done"
+    value="{{ task?.done }}"
+  />
+  <div class="task-description ellipsis">
+    <h3>{{ task?.description | slice: 0:100 }}</h3>
+  </div>
+  <div class="task-actions">
+    <fa-icon class="editIcon" [icon]="faPen" size="lg" [spin]="false"></fa-icon>
+    <fa-icon class="deleteIcon" [icon]="faTimes" size="2x" [spin]="false"></fa-icon>
+  </div>
 </div>
