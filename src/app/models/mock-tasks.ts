@@ -1,4 +1,4 @@
-import { Task } from './models';
+import { Task } from './task';
 
 export const Tasks: Task[] = [
   {

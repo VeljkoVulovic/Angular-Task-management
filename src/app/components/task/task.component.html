@@ -9,7 +9,22 @@
     <h3>{{ task?.description | slice: 0:100 }}</h3>
   </div>
   <div class="task-actions">
-    <fa-icon class="editIcon" [icon]="faPen" size="lg" [spin]="false"></fa-icon>
-    <fa-icon class="deleteIcon" [icon]="faTimes" size="2x" [spin]="false"></fa-icon>
+    <a [routerLink]="['task/edit', task?.id]">
+      <fa-icon
+        class="editIcon"
+        [icon]="faPen"
+        size="lg"
+        [spin]="false"
+      ></fa-icon>
+    </a>
+    <a>
+      <fa-icon
+        class="deleteIcon"
+        [icon]="faTimes"
+        size="2x"
+        [spin]="false"
+        (click)="deleteTask(task?.id)"
+      ></fa-icon>
+    </a>
   </div>
 </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faTimes, faPen } from '@fortawesome/free-solid-svg-icons';
-import { Task } from '../../models';
+import { Task } from '../../models/task';
 
 @Component({
   selector: 'app-task',
@@ -15,4 +15,12 @@ export class TaskComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  editTask(id?: number) {
+    console.log(id);
+  }
+
+  deleteTask(id?: number) {
+    console.log(id);
+  }
 }
