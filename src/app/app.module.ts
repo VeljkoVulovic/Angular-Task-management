@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TasksBoardComponent } from './components/tasks-board/tasks-board.component';
 import { ButtonComponent } from './components/button/button.component';
@@ -19,14 +20,10 @@ import { FormComponent } from './components/form/form.component';
     TaskComponent,
     HeaderComponent,
     EditTaskComponent,
-    FormComponent
+    FormComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FontAwesomeModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

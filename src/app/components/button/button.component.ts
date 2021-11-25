@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+  styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent implements OnInit {
-  faPlus = faPlus;
+  @Input() name?: string;
+  @Input() class?: string;
+  @Input() link?: string;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

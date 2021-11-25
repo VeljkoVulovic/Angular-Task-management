@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faTimes, faPen } from '@fortawesome/free-solid-svg-icons';
+import { TaskService } from 'src/app/services/task.service';
 import { Task } from '../../models/task';
 
 @Component({
@@ -12,7 +13,7 @@ export class TaskComponent implements OnInit {
   faTimes = faTimes;
   faPen = faPen;
 
-  constructor() {}
+  constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {}
 
@@ -21,6 +22,6 @@ export class TaskComponent implements OnInit {
   }
 
   deleteTask(id?: number) {
-    console.log(id);
+    this.taskService.deleteTask(id);
   }
 }

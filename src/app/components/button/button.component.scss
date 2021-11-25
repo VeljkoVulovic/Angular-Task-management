@@ -1,16 +1,17 @@
-//general scss for btn
 .btn {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 4rem;
+  padding: 1.3rem 0;
+  width: 15rem;
   display: inline-block;
   border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   border: none;
   cursor: pointer;
   transform: perspective(10rem) translateZ(-0.5rem);
+  color: #fff;
 }
 
 .btn:hover {
@@ -30,13 +31,68 @@
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
 
-//add-task button
 .btn-green {
   background-color: #3cc76a;
-  color: #fff;
-  margin-right: 0.5rem;
 }
 
 .btn-green:hover {
   background-color: #2cce4f;
+}
+
+.btn-submit {
+  background-color: #427bc7;
+  margin-right: 0;
+  float: right;
+}
+
+.btn-submit:hover {
+  background-color: #296fca;
+}
+
+@mixin cross($size: 2rem, $color: currentColor, $thickness: 0.1rem) {
+  margin: 1rem 1.5rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  position: relative;
+  width: $size;
+  height: $size;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: ($size - $thickness) / 2;
+    left: 0;
+    right: 0;
+    height: $thickness;
+    background: $color;
+    border-radius: $thickness;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.cross-stand-alone {
+  @include cross(4rem, #000000, 0.3rem);
+}
+
+.cross-stand-alone:hover {
+  @include cross(4rem, #a23bce, 0.3rem);
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
+}
+
+.cross-stand-alone:focus,
+.cross-stand-alone:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }

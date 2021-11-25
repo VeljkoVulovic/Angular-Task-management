@@ -9,6 +9,7 @@ import { Task } from '../../models/task';
 })
 export class TasksBoardComponent implements OnInit {
   tasks: Task[] = [];
+
   constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
