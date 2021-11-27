@@ -4,3 +4,12 @@
   align-items: center;
   margin-bottom: 1.5rem;
 }
+
+.title {
+  transition: all 0.2s;
+}
+
+.title:hover {
+  transform: skewY(1deg) skewX(5deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgb(0 0 0 / 20%);
+}

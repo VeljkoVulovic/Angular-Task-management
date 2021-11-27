@@ -13,6 +13,6 @@ export class TasksBoardComponent implements OnInit {
   constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
-    this.tasks = this.taskService.getTasks();
+    this.tasks = this.taskService.getTasksFromLocalStorage();
   }
 }

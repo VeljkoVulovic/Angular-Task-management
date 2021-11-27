@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { TaskService } from 'src/app/services/task.service';
 import { Task } from '../../models/task.model';
-import { Tasks } from '../../models/mock-tasks';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,7 +13,6 @@ export class FormComponent implements OnInit {
   @Input() id?: number;
   btnName?: string = 'Submit';
   btnClass?: string = 'btn btn-submit';
-  tasks = Tasks;
   task?: Task = {
     id: 0,
     description: '',
@@ -28,7 +26,7 @@ export class FormComponent implements OnInit {
       this.task = this.taskService.getTaskById(this.id);
     }
   }
-
+  
   onSubmit(form: NgForm) {
     let task: Task = {
       id: Math.floor(Math.random() * 1000),

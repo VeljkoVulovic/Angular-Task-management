@@ -4,6 +4,7 @@
     type="checkbox"
     [checked]="task?.done"
     value="{{ task?.done }}"
+    (click)="changeStatus(task?.id)"
   />
   <div class="task-description ellipsis">
     <h3>{{ task?.description | slice: 0:100 }}</h3>

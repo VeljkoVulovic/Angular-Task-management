@@ -17,10 +17,9 @@ export class TaskComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  editTask(id?: number) {
-    console.log(id);
+  changeStatus(id?: number) {
+    this.taskService.changeStatus(id);
   }
-
   deleteTask(id?: number) {
     this.taskService.deleteTask(id);
   }
