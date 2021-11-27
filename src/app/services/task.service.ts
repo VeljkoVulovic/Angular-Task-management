@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Tasks } from '../models/mock-tasks';
-import { Task } from '../models/task';
+import { Task } from '../models/task.model';
 
 @Injectable({
   providedIn: 'root',
@@ -28,11 +28,11 @@ export class TaskService {
   }
 
   editTask(task: Task) {
-    let oldTask = this.tasks.find((item) => item.id === task.id)!;
-    oldTask = {
-      id: task.id,
-      description: task.description,
-      done: task.done,
-    };
+    this.tasks.forEach(function (item) {
+      if (item.id === task.id) {
+        item.description = task.description;
+        item.done = task.done;
+      }
+    });
   }
 }

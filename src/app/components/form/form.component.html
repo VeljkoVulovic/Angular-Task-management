@@ -1,25 +1,33 @@
-<form class="form" (ngSubmit)="onSubmit(form)" #form="ngForm">
+<form
+  class="form"
+  (ngSubmit)="f.form.valid && onSubmit(f)"
+  #f="ngForm"
+  novalidate
+>
   <div class="form-group">
     <label for="description" class="form-label">Description</label>
     <input
       type="text"
-      class="form-input"
+      class="form-input form-control"
       id="description"
       autocomplete="off"
       required
       [ngModel]="task!.description"
       name="description"
+      #description="ngModel"
+      [ngClass]="{ 'is-invalid': f.submitted && description.invalid }"
     />
   </div>
   <div class="form-radio-group-and-button">
     <div class="form-radio-group">
       <input
         type="radio"
-        class="form-radio-input"
+        class="form-radio-input form-control"
         id="to-do"
         [value]="false"
         [(ngModel)]="task!.done"
         name="done"
+        required
       />
       <label for="to-do" class="form-radio-label">
         <span class="form-radio-button"></span>
@@ -29,11 +37,12 @@
     <div class="form-radio-group">
       <input
         type="radio"
-        class="form-radio-input"
+        class="form-radio-input form-control"
         id="done"
         [value]="true"
         [(ngModel)]="task!.done"
         name="done"
+        required
       />
       <label for="done" class="form-radio-label">
         <span class="form-radio-button"></span>

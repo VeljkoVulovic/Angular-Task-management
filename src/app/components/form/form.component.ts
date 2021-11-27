@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { TaskService } from 'src/app/services/task.service';
-import { Task } from '../../models/task';
+import { Task } from '../../models/task.model';
 import { Tasks } from '../../models/mock-tasks';
 import { Router } from '@angular/router';
 
