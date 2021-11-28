@@ -1,13 +1,13 @@
 .background {
-    height: 95vh;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba(#cccccc, 0.4),
-        rgba(#5d5d5d, 0.4)
-      ),
-      url(../assets/images/tasks-board-background.jpg);
-    background-size: cover;
-    background-position: 50% 65%;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 2.5rem 0 #999999;
-  }
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(#cccccc, 0.4),
+      rgba(#5d5d5d, 0.4)
+    ),
+    url(../assets/images/tasks-board-background.jpg);
+  background-size: cover;
+  background-position: 50% 65%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2.5rem 0 #999999;
+}

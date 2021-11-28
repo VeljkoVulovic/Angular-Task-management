@@ -25,7 +25,7 @@ export class FormComponent implements OnInit {
       this.task = this.taskService.getTaskById(this.id)!;
     }
   }
-  
+
   onSubmit(form: NgForm) {
     let task: Task = {
       description: form.value.description,
@@ -35,13 +35,11 @@ export class FormComponent implements OnInit {
     if (this.id) {
       task.id = this.id;
       this.taskService.editTask(task);
-
     } else {
-      task.id = Math.floor(Math.random() * 1000);
+      task.id = Math.floor(Math.random() * 10000);
       this.taskService.addTask(task);
     }
 
-  
     this.router.navigateByUrl('');
   }
 }

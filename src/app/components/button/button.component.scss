@@ -1,3 +1,6 @@
+$black: #000000;
+$purple: #a23bce;
+
 .btn {
   text-transform: uppercase;
   text-decoration: none;
@@ -84,11 +87,11 @@
 }
 
 .cross-stand-alone {
-  @include cross(4rem, #000000, 0.3rem);
+  @include cross(4rem, $black, 0.3rem);
 }
 
 .cross-stand-alone:hover {
-  @include cross(4rem, #a23bce, 0.3rem);
+  @include cross(4rem, $purple, 0.3rem);
   box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
 }
 
@@ -105,11 +108,11 @@
   }
 
   .cross-stand-alone {
-    @include cross(2.5rem, #000000, 0.3rem);
+    @include cross(2.5rem, $black, 0.3rem);
   }
 
   .cross-stand-alone:hover {
-    @include cross(2.5rem, #a23bce, 0.3rem);
+    @include cross(2.5rem, $purple, 0.3rem);
   }
 }
 @media only screen and (max-width: 768px) {
@@ -120,11 +123,11 @@
   }
 
   .cross-stand-alone {
-    @include cross(2rem, #000000, 0.3rem);
+    @include cross(2rem, $black, 0.3rem);
   }
 
   .cross-stand-alone:hover {
-    @include cross(2rem, #a23bce, 0.3rem);
+    @include cross(2rem, $purple, 0.3rem);
   }
 }
 @media only screen and (max-width: 600px) {
@@ -135,10 +138,26 @@
   }
 
   .cross-stand-alone {
-    @include cross(1.5rem, #000000, 0.2rem);
+    @include cross(1.5rem, $black, 0.2rem);
   }
 
   .cross-stand-alone:hover {
-    @include cross(1.5rem, #a23bce, 0.2rem);
+    @include cross(1.5rem, $purple, 0.2rem);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .btn {
+    font-size: 1rem;
+    width: 7rem;
+    padding: 0.5rem 0;
+  }
+
+  .cross-stand-alone {
+    @include cross(1.2rem, $black, 0.2rem);
+  }
+
+  .cross-stand-alone:hover {
+    @include cross(1.2rem, $purple, 0.2rem);
   }
 }

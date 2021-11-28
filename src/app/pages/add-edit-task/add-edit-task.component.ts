@@ -14,6 +14,6 @@ export class AddEditTaskComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
-    this.header = this.id ? 'Add new task' : 'Edit task';
+    this.header = this.id ? 'Edit task' : 'Add new task';
   }
 }

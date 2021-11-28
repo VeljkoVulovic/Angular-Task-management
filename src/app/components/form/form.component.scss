@@ -1,6 +1,11 @@
+$black: #000000;
+$silver: #999999;
+$red: #b11111;
+$purple: #bf55ec;
+
 .form {
   margin-top: 1.5rem;
-  border-top: 0.3rem solid #000000;
+  border-top: 0.3rem solid $black;
 
   &-group:not(:last-child) {
     margin: 1rem 0 2rem;
@@ -21,16 +26,16 @@
 
     &:focus {
       outline: none;
-      box-shadow: 0 1rem 2rem rgba(#999999, 0.1);
-      border-bottom: 0.3rem solid #bf55ec;
+      box-shadow: 0 1rem 2rem rgba($silver, 0.1);
+      border-bottom: 0.3rem solid $purple;
     }
 
     &:focus:invalid {
-      border-bottom: 0.3rem solid #999999;
+      border-bottom: 0.3rem solid $silver;
     }
 
     &::-webkit-input-placeholder {
-      color: #000000;
+      color: $black;
     }
   }
 
@@ -67,7 +72,7 @@
   }
 
   &-radio-label {
-    font-size: #000000;
+    font-size: $black;
     cursor: pointer;
     position: relative;
     padding-left: 4.5rem;
@@ -76,7 +81,7 @@
   &-radio-button {
     height: 3rem;
     width: 3rem;
-    border: 0.5rem solid #000000;
+    border: 0.5rem solid $black;
     border-radius: 50%;
     display: inline-block;
     position: absolute;
@@ -93,7 +98,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: #bf55ec;
+      background-color: $purple;
       opacity: 0;
       transition: opacity 0.2;
     }
@@ -105,32 +110,17 @@
 }
 
 .is-invalid {
-  border-bottom: 0.5rem solid #b11111;
+  border-bottom: 0.5rem solid $red;
 }
 
 @media only screen and (max-width: 992px) {
   .form {
     margin-top: 1.3rem;
-    border-top: 0.3rem solid #000000;
+    border-top: 0.3rem solid $black;
 
     &-input {
       font-size: 1.3rem;
       padding: 1.3rem 1.5rem;
-    }
-
-    &-label {
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-      display: block;
-      transition: all 0.3s;
-    }
-
-    &-radio-group-and-button div:last-child {
-      padding-top: 1.2rem;
-    }
-
-    &-radio-input {
-      display: none;
     }
 
     &-radio-label {
@@ -148,7 +138,7 @@
     &-radio-button {
       height: 2.5rem;
       width: 2.5rem;
-      border: 0.4rem solid #000000;
+      border: 0.4rem solid $black;
 
       &::after {
         height: 1.1rem;
@@ -158,35 +148,35 @@
   }
 
   .is-invalid {
-    border-bottom: 0.4rem solid #b11111;
+    border-bottom: 0.4rem solid $red;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .form {
     margin-top: 1.1rem;
-    border-top: 0.2rem solid #000000;
+    border-top: 0.2rem solid $black;
 
     &-group:not(:last-child) {
       margin: 0.8rem 0 1.5rem;
     }
+
     &-input {
       font-size: 1.1rem;
       padding: 1.1rem 1.5rem;
       border-bottom: 0.2rem solid transparent;
 
       &:focus {
-        border-bottom: 0.2rem solid #bf55ec;
+        border-bottom: 0.2rem solid $purple;
       }
 
       &:focus:invalid {
-        border-bottom: 0.2rem solid #999999;
+        border-bottom: 0.2rem solid $silver;
       }
     }
 
     &-label {
       font-weight: 500;
-      margin-bottom: 0.3rem;
     }
 
     &-radio-group-and-button div:last-child {
@@ -204,7 +194,7 @@
     &-radio-button {
       height: 2rem;
       width: 2rem;
-      border: 0.3rem solid #000000;
+      border: 0.3rem solid $black;
 
       &::after {
         height: 0.9rem;
@@ -213,7 +203,7 @@
     }
   }
   .is-invalid {
-    border-bottom: 0.3rem solid #b11111;
+    border-bottom: 0.3rem solid $red;
   }
 }
 
@@ -250,21 +240,12 @@
     &-radio-button {
       height: 1.5rem;
       width: 1.5rem;
-      border: 0.2rem solid #000000;
+      border: 0.2rem solid $black;
 
       &::after {
         height: 0.7rem;
         width: 0.7rem;
       }
-    }
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .form {
-
-    &-radio-group-and-button div:last-child {
-      padding-top: 0.1rem;
     }
   }
 }
