@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { faTimes, faPen } from '@fortawesome/free-solid-svg-icons';
 import { TaskService } from 'src/app/services/task.service';
 import { Task } from '../../models/task.model';
 
@@ -10,8 +9,6 @@ import { Task } from '../../models/task.model';
 })
 export class TaskComponent implements OnInit {
   @Input() task!: Task;
-  faTimes = faTimes;
-  faPen = faPen;
 
   constructor(private taskService: TaskService) {}
 
@@ -20,11 +17,6 @@ export class TaskComponent implements OnInit {
   changeStatus(id?: number) {
     if (id) {
       this.taskService.changeStatus(id);
-    }
-  }
-  deleteTask(id?: number) {
-    if (id) {
-      this.taskService.deleteTask(id);
     }
   }
 }

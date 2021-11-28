@@ -36,23 +36,13 @@
   justify-content: space-between;
   width: 7%;
   margin-left: 1.3rem;
+  align-items: inherit;
 }
 
 .task-checkbox {
   margin-right: 1rem;
   width: 1.8rem;
   height: 1.8rem;
-}
-
-.editIcon {
-  margin-top: 0.6rem;
-  color: #0000ffcc;
-}
-
-.deleteIcon {
-  margin-top: 0.5rem;
-  color: #ff0000cc;
-  cursor: pointer;
 }
 
 input[type="checkbox"] {
@@ -63,10 +53,6 @@ input[type="checkbox"] {
   .task-checkbox {
     width: 1.6rem;
     height: 1.6rem;
-  }
-
-  .editIcon {
-    margin: 0.7rem 0.5rem 0 0;
   }
 
   .task-actions {
@@ -92,10 +78,6 @@ input[type="checkbox"] {
   .task-description {
     width: 91%;
   }
-
-  .editIcon {
-    margin: 0.8rem 0.5rem 0 0;
-  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -110,14 +92,6 @@ input[type="checkbox"] {
     margin-right: 0.8rem;
     width: 1.4rem;
     height: 1.4rem;
-  }
-
-  .editIcon {
-    margin: 0.65rem 0.5rem 0 0;
-  }
-
-  .ng-fa-icon {
-    font-size: 0.8em !important;
   }
 }
 

@@ -1,0 +1,4 @@
+<a class="{{ color }}" (click)="onClick()">
+  <fa-icon [icon]="faEdit" size="lg" *ngIf="action === 'edit'"></fa-icon>
+  <fa-icon [icon]="faTrashRestore" size="lg" *ngIf="action === 'delete'"></fa-icon>
+</a>

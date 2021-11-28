@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddEditTaskComponent } from './pages/add-edit-task/add-edit-task.component';
 import { FormComponent } from './components/form/form.component';
+import { LinkComponent } from './components/link/link.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormComponent } from './components/form/form.component';
     HeaderComponent,
     AddEditTaskComponent,
     FormComponent,
+    LinkComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [],

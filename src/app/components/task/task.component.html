@@ -10,11 +10,7 @@
     <h3>{{ task.description | slice: 0:100 }}</h3>
   </div>
   <div class="task-actions">
-    <a class="editIcon" [routerLink]="['task/edit', task.id]">
-      <fa-icon [icon]="faPen" size="lg"></fa-icon>
-    </a>
-    <a class="deleteIcon" (click)="deleteTask(task.id)">
-      <fa-icon [icon]="faTimes" size="2x"></fa-icon>
-    </a>
+    <app-link [id]="task.id" color="blue" action="edit"></app-link>
+    <app-link [id]="task.id" color="red" action="delete"></app-link>
   </div>
 </div>
