@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-button',
@@ -7,7 +6,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent implements OnInit {
-  @Input() name?: string;
+  @Input() name!: string;
   @Input() class?: string;
   @Input() link?: string;
 

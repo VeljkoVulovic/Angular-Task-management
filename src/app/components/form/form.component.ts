@@ -11,10 +11,9 @@ import { Router } from '@angular/router';
 })
 export class FormComponent implements OnInit {
   @Input() id?: number;
-  btnName?: string = 'Submit';
-  btnClass?: string = 'btn btn-submit';
-  task?: Task = {
-    id: 0,
+  btnName: string = 'Submit';
+  btnClass: string = 'btn btn-submit';
+  task: Task = {
     description: '',
     done: false,
   };
@@ -22,25 +21,27 @@ export class FormComponent implements OnInit {
   constructor(private taskService: TaskService, private router: Router) {}
 
   ngOnInit(): void {
-    if (this.id !== 0) {
-      this.task = this.taskService.getTaskById(this.id);
+    if (this.id) {
+      this.task = this.taskService.getTaskById(this.id)!;
     }
   }
   
   onSubmit(form: NgForm) {
     let task: Task = {
-      id: Math.floor(Math.random() * 1000),
       description: form.value.description,
       done: form.value.done,
     };
 
-    if (this.id === 0) {
-      this.taskService.addTask(task);
-    } else {
+    if (this.id) {
       task.id = this.id;
       this.taskService.editTask(task);
+
+    } else {
+      task.id = Math.floor(Math.random() * 1000);
+      this.taskService.addTask(task);
     }
 
+  
     this.router.navigateByUrl('');
   }
 }

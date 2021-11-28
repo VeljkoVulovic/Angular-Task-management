@@ -9,7 +9,7 @@ import { Task } from '../../models/task.model';
   styleUrls: ['./task.component.scss'],
 })
 export class TaskComponent implements OnInit {
-  @Input() task?: Task;
+  @Input() task!: Task;
   faTimes = faTimes;
   faPen = faPen;
 
@@ -18,9 +18,13 @@ export class TaskComponent implements OnInit {
   ngOnInit(): void {}
 
   changeStatus(id?: number) {
-    this.taskService.changeStatus(id);
+    if (id) {
+      this.taskService.changeStatus(id);
+    }
   }
   deleteTask(id?: number) {
-    this.taskService.deleteTask(id);
+    if (id) {
+      this.taskService.deleteTask(id);
+    }
   }
 }

@@ -10,3 +10,78 @@
   border-radius: 0.5rem;
   box-shadow: 0 0 1.5rem 0 #999999 inset;
 }
+
+.overflow-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: auto;
+  max-height: 70rem;
+}
+
+.overflow-scroll::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.overflow-scroll::-webkit-scrollbar-thumb {
+  background: #444444;
+}
+
+.overflow-scroll::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+@media only screen and (max-width: 992px) {
+  .tasks-board {
+    width: 60rem;
+    padding: 3rem;
+  }
+
+  .overflow-scroll {
+    max-height: 60rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .tasks-board {
+    width: 50rem;
+    padding: 2.5rem;
+  }
+
+  .overflow-scroll {
+    max-height: 50rem;
+  }
+
+  .overflow-scroll::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tasks-board {
+    width: 40rem;
+    padding: 2rem;
+  }
+
+  .overflow-scroll {
+    max-height: 40rem;
+  }
+
+  .overflow-scroll::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .tasks-board {
+    width: 30rem;
+    padding: 1.5rem;
+  }
+
+  .overflow-scroll {
+    max-height: 30rem;
+  }
+
+  .overflow-scroll::-webkit-scrollbar {
+    width: 0.2rem;
+  }
+}

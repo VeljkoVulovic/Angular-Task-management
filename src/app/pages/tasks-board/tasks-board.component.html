@@ -1,5 +1,11 @@
 <div class="tasks-board">
   <app-header title="TO DO List"></app-header>
-  <app-task *ngFor="let task of tasks" [task]="task"></app-task>
+  <div class="overflow-scroll">
+    <app-task
+      *ngFor="let task of tasks; let last = last"
+      [task]="task"
+      [ngClass]="{ 'last-child': last }"
+    ></app-task>
+  </div>
   <h3 *ngIf="!tasks.length">- Welcome, please add some tasks to list</h3>
 </div>

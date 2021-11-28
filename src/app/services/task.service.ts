@@ -8,7 +8,7 @@ export class TaskService {
   tasks: Task[] = [];
   constructor() {}
 
-  setTasksToLocalStorage(tasks?: Task[]) {
+  setTasksToLocalStorage(tasks: Task[]) {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }
 
@@ -17,11 +17,11 @@ export class TaskService {
     return this.tasks;
   }
 
-  getTaskById(id?: number) {
+  getTaskById(id: number) {
     return this.tasks.find((task) => task.id === id);
   }
 
-  changeStatus(id?: number) {
+  changeStatus(id: number) {
     this.tasks.forEach(function (item) {
       if (item.id === id) {
         item.done = !item.done;
@@ -31,11 +31,11 @@ export class TaskService {
   }
 
   addTask(task: Task) {
-    this.tasks?.push(task);
+    this.tasks.push(task);
     this.setTasksToLocalStorage(this.tasks);
   }
 
-  deleteTask(id?: number) {
+  deleteTask(id: number) {
     let task = this.tasks.find((task) => task.id === id)!;
     let index = this.tasks.indexOf(task, 0);
     this.tasks.splice(index, 1);

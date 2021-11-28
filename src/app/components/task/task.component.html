@@ -2,18 +2,18 @@
   <input
     class="task-checkbox"
     type="checkbox"
-    [checked]="task?.done"
-    value="{{ task?.done }}"
-    (click)="changeStatus(task?.id)"
+    [checked]="task.done"
+    value="{{ task.done }}"
+    (click)="changeStatus(task.id)"
   />
-  <div class="task-description ellipsis">
-    <h3>{{ task?.description | slice: 0:100 }}</h3>
+  <div class="task-description" (click)="changeStatus(task.id)">
+    <h3>{{ task.description | slice: 0:100 }}</h3>
   </div>
   <div class="task-actions">
-    <a class="editIcon" [routerLink]="['task/edit', task?.id]">
+    <a class="editIcon" [routerLink]="['task/edit', task.id]">
       <fa-icon [icon]="faPen" size="lg"></fa-icon>
     </a>
-    <a class="deleteIcon" (click)="deleteTask(task?.id)">
+    <a class="deleteIcon" (click)="deleteTask(task.id)">
       <fa-icon [icon]="faTimes" size="2x"></fa-icon>
     </a>
   </div>

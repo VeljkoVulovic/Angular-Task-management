@@ -6,11 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Input() title?: string;
+  @Input() title!: string;
   @Input() button?: string;
-  btnName?: string = 'Add task';
-  btnClass?: string = 'btn btn-green';
-  btnLink?: string = 'task/add/0';
+  btnName: string = 'Add task';
+  btnClass: string = 'btn btn-green';
+  btnLink: string = 'task/add/0';
 
   constructor() {}
 

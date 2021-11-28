@@ -1,8 +1,7 @@
 .task {
-  background-color: #c0c0c0;
-  margin: 5px;
-  padding: 15px 15px;
-  cursor: pointer;
+  background-color: #bbbbbb;
+  margin: 0 0.5rem 0.5rem;
+  padding: 1.5rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,7 +9,7 @@
 }
 
 .task:hover {
-  background-color: #a0a0a0;
+  background-color: #9e9e9e;
 }
 
 .task-description {
@@ -25,7 +24,11 @@
   overflow: visible;
   white-space: normal;
   text-overflow: ellipsis;
-  height: auto; /* just added this line */
+  height: auto;
+}
+
+.task-description h3:hover {
+  cursor: pointer;
 }
 
 .task-actions {
@@ -47,10 +50,83 @@
 }
 
 .deleteIcon {
-  margin-top: 0.3rem;
+  margin-top: 0.5rem;
   color: #ff0000cc;
+  cursor: pointer;
 }
 
 input[type="checkbox"] {
   filter: invert(0%) hue-rotate(180deg) brightness(1.5);
+}
+
+@media only screen and (max-width: 992px) {
+  .task-checkbox {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .editIcon {
+    margin: 0.7rem 0.5rem 0 0;
+  }
+
+  .task-actions {
+    margin-left: 1rem;
+    width: 8%;
+  }
+
+  .task-description {
+    width: 92%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .task {
+    padding: 1.3rem 1.3rem;
+  }
+
+  .task-actions {
+    margin-left: 1rem;
+    width: 9%;
+  }
+
+  .task-description {
+    width: 91%;
+  }
+
+  .editIcon {
+    margin: 0.8rem 0.5rem 0 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .task {
+    padding: 1.1rem 1.1rem;
+  }
+  .task-actions {
+    margin-left: 0.9rem;
+  }
+
+  .task-checkbox {
+    margin-right: 0.8rem;
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .editIcon {
+    margin: 0.65rem 0.5rem 0 0;
+  }
+
+  .ng-fa-icon {
+    font-size: 0.8em !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .task-actions {
+    width: 10%;
+  }
+
+  .task-description {
+    width: 90%;
+  }
 }

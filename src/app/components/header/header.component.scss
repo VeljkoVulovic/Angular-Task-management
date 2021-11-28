@@ -13,3 +13,21 @@
   transform: skewY(1deg) skewX(5deg) scale(1.1);
   text-shadow: 0.5rem 1rem 2rem rgb(0 0 0 / 20%);
 }
+
+@media only screen and (max-width: 992px) {
+  .header {
+    margin-bottom: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    margin-bottom: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    margin-bottom: 0.9rem;
+  }
+}
