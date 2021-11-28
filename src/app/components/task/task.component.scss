@@ -72,11 +72,11 @@ input[type="checkbox"] {
 
   .task-actions {
     margin-left: 1rem;
-    width: 9%;
+    width: 9.5%;
   }
 
   .task-description {
-    width: 91%;
+    width: 90.5%;
   }
 }
 
@@ -93,14 +93,23 @@ input[type="checkbox"] {
     width: 1.4rem;
     height: 1.4rem;
   }
+
+  .task-actions {
+    width: 11.5%;
+  }
+
+  .task-description {
+    width: 88.5%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   .task-actions {
-    width: 10%;
+    margin-left: 0.8rem;
+    width: 14%;
   }
 
   .task-description {
-    width: 90%;
+    width: 86%;
   }
 }

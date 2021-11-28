@@ -15,7 +15,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   min-height: auto;
-  max-height: 70rem;
+  max-height: 65rem;
 }
 
 .overflow-scroll::-webkit-scrollbar {
@@ -37,7 +37,7 @@
   }
 
   .overflow-scroll {
-    max-height: 60rem;
+    max-height: 55rem;
   }
 }
 
@@ -48,7 +48,7 @@
   }
 
   .overflow-scroll {
-    max-height: 50rem;
+    max-height: 45rem;
   }
 
   .overflow-scroll::-webkit-scrollbar {
@@ -63,7 +63,7 @@
   }
 
   .overflow-scroll {
-    max-height: 40rem;
+    max-height: 35rem;
   }
 
   .overflow-scroll::-webkit-scrollbar {
@@ -78,7 +78,7 @@
   }
 
   .overflow-scroll {
-    max-height: 30rem;
+    max-height: 25rem;
   }
 
   .overflow-scroll::-webkit-scrollbar {
